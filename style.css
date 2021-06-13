@@ -1,0 +1,73 @@
+body, table {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(180deg, rgba(13,115,0,1) 0%, rgba(168,251,159,1) 30%, rgba(168,251,159,1) 70%, rgba(13,115,0,1) 100%);
+  user-select:  none;
+}
+
+@font-face {
+  font-family: letras;
+  src: url(Staatliches-Regular.ttf);
+}
+
+.title {
+  height: 20%;
+  font-size: 110px;
+  vertical-align: center;
+  text-align: center;
+  font-weight: 500;
+  font-family:  letras;
+
+}
+
+.butt-row {
+  height: 30%;
+}
+
+.butt-row td:first-child {
+  padding-left: 80px;
+}
+
+.butt-row:first-child {
+  vertical-align: bottom;
+} 
+.butt-row:last-child {
+  vertical-align: top;
+} 
+
+.footnote {
+  height: 20%;
+  vertical-align: center;
+  text-align: center;
+}
+
+.footnote input {
+  cursor: pointer;
+  box-shadow:  0px 0px 30px 5px greenyellow;
+  background: radial-gradient(circle, rgba(34,195,39,1) 0%, rgba(199,253,45,1) 100%);
+  outline: none;
+  border: none;
+  font-size: 50px;
+  font-family:  letras;
+  transition: transform 0.5s;
+}
+
+.footnote input:hover{transform: scale(1.5);}
+
+.butt {
+  width: 100%;
+transition: transform 0.5s;
+ cursor: pointer;
+}
+
+.butt:hover {
+  transform: scale(1.2);
+}

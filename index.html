@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function specialFart() {
+			document.getElementById("audio-special").play();
+		}
+
+		function onButtClick(butt, index) {
+			butt.src = "buttfarttrans.png";
+
+			let audio = document.getElementById("audio" + index);
+			audio.play();
+		}
+
+		function loadButtons() {
+			let butts = document.querySelectorAll(".butt");
+			let audios = document.querySelectorAll(".fart");
+
+			audios.forEach((audio, index) => audio.onended = () => butts[index].src = "buttplaintrans.png");
+
+			butts.forEach((butt, index) => {
+				butt.onclick = () => onButtClick(butt, index);
+				butt.onmousedown = () => butt.src = "butttrans.png";
+			});
+		}
+	</script>
+</head>
+<body onload="loadButtons()">
+	<audio id="audio0" class="fart" src="fart5.mp3" preload="auto"></audio>
+	<audio id="audio1" class="fart" src="fart4.mp3" preload="auto"></audio>
+	<audio id="audio2" class="fart" src="fart3.mp3" preload="auto"></audio>
+	<audio id="audio3" class="fart" src="fart2.mp3" preload="auto"></audio>
+	<audio id="audio4" class="fart" src="fart1.mp3" preload="auto"></audio>
+	<audio id="audio5" class="fart" src="fart0.mp3" preload="auto"></audio>
+	<audio id="audio6" class="fart" src="fart-1.mp3" preload="auto"></audio>
+	<audio id="audio7" class="fart" src="fart-2.mp3" preload="auto"></audio>
+	<audio id="audio8" class="fart" src="fart-3.mp3" preload="auto"></audio>
+	<audio id="audio9" class="fart" src="fart-4.mp3" preload="auto"></audio>
+	<audio id="audio-special" src="peidoespecial.flac" preload="auto"></audio>
+	<table>
+		<tr class="title">
+			<td colspan=5>
+				FART SYMPHONY!
+			</td>
+		</tr>
+		<tr class="butt-row">
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+		</tr>
+		<tr class="butt-row">
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+			<td><img class="butt" src="buttplaintrans.png"/></td>
+		</tr>
+		<tr class="footnote">
+			<td colspan=5>
+				<input type="button" value="O peido é o grito do povo. Caga-te todo!" onclick="specialFart()" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
